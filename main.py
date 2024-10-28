@@ -22,7 +22,7 @@ debug = True
 
 # Set the bot token for debugging or manual input
 if debug:
-    LoginToken = 'MTAwMDAzNDUxNDMyNTc0OTkzMQ.G6tEdl.03rI08IdSBmLiuTMNiFUNvj7yGIFrzQILCK22w'  # Replace with your bot token
+    LoginToken = ''  # Replace with your bot token
     print(Colors.GREEN + "DebugMode: ON" + Colors.RESET)
 else:
     LoginToken = input("Please enter your bot token: ")
