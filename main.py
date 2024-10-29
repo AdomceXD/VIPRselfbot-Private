@@ -24,7 +24,7 @@ subprocess.run(['clear'])
 debug = True
 
 if debug:
-    LoginToken = 'MTAwMDAzNDUxNDMyNTc0OTkzMQ.Gp47r6.xvMgYl_9aF39wCQNgzWbBMf3IvIZDuc_zlftio'  # Replace with your actual token
+    LoginToken = 'M T A w M D A zNDUxNDMyNTc0OTkzMQ.Gp47r6.xvMgYl_9aF39wCQNgzWbBMf3IvIZDuc_zl f t i o'  # Replace with your actual token
     print(Colors.GREEN + "DebugMode: ON" + Colors.RESET)
 else:
     LoginToken = input("Please enter your bot token: ")
