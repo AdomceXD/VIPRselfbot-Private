@@ -57,7 +57,7 @@ async def handle_command(client, message):
         await greet_command(client, message)
     elif command[0] == 'coinflip':
         await coinflip_command(client, message)
-    elif command[0] == 'clear':
+    elif command[0] == 'byebye':
         await clear_command(client, message, command)
     elif command[0] == 'calculate':
         await calculate_command(client, message, command)
@@ -80,9 +80,9 @@ async def set_prefix_command(client, message, command):
 async def unbspam_command(client, message):
     if not hasattr(client, "unbspam_task") or client.unbspam_task is None or client.unbspam_task.done():
         client.unbspam_task = client.loop.create_task(unbspam_task(message.channel))
-        await message.channel.send("Started spamming commands.")
+        #await message.channel.send("Started spamming commands.")
     else:
-        await message.channel.send("Spam is already running.")
+        #await message.channel.send("Spam is already running.")
 
 async def stopspam_command(client, message):
     if hasattr(client, "unbspam_task") and client.unbspam_task:
@@ -99,7 +99,9 @@ async def unbspam_task(channel):
         await channel.send("!!work")
         await asyncio.sleep(2)
         await channel.send("!!crime")
-        await asyncio.sleep(90)
+        await asyncio.sleep(2)
+        await channel.send("!!slut")
+        await asyncio.sleep(610)
 
 async def uptime_command(client, message):
     current_time = datetime.now()
@@ -126,10 +128,9 @@ async def help_command(client, message):
         "| unbspam                | Starts spamming certain commands    |\n"
         "| stopspam               | Stops the spam commands             |\n"
         "| coinflip               | Simulates a coin flip               |\n"
-        "| clear <n>             | Clears <n> messages sent by the bot |\n"
         "| calculate <expression> | Performs basic math (e.g., `3 + 5`) |\n"
-        "| userinfo <@user>      | Displays user info                  |\n"
-        "| serverinfo            | Displays server info                |\n"
+        "| userinfo <@user>       | Displays user info                  |\n"
+        "| serverinfo             | Displays server info                |\n"
         "```"
     )
     await message.channel.send(help_message)
