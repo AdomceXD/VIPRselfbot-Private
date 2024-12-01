@@ -5,6 +5,7 @@ import logging
 from datetime import datetime
 from commands import handle_command
 from colorama import init
+from discord_self_embed import Embed
 
 # Initialize colorama
 init(autoreset=True)
@@ -39,6 +40,7 @@ class MyClient(discord.Client):
 
     async def on_ready(self):
         ascii_art = [
+            "                            ",
             "██╗   ██╗██╗██████╗ ██████╗ ",
             "██║   ██║██║██╔══██╗██╔══██╗",
             "██║   ██║██║██████╔╝██████╔╝",
